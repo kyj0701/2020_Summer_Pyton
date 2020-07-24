@@ -10,8 +10,8 @@ class LRUCache:
         self.s_chk = []
 
     def get(self, key: int) -> int:
-        self.chk[key] = time.time()
         if key in self.cache:
+            self.chk[key] = time.time()
             return self.cache[key]
         else:
             return -1
